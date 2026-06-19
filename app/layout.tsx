@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import '../public/css/styles.css'
 
 export const metadata: Metadata = {
   title: 'EU KASKO - Страховка для европейских авто',
@@ -16,6 +15,7 @@ export default function RootLayout({
     <html lang="ru">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="/css/styles.css" />
       </head>
       <body>{children}</body>
     </html>
