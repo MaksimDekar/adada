@@ -51,16 +51,44 @@ export default function QuotePage() {
 
   return (
     <>
+      <a className="skip" href="#content">Перейти к содержимому</a>
+      
       <header className="header">
         <div className="container header__inner">
-          <Link href="/" className="brand">
+          <Link className="brand" href="/">
             <span className="brand__logo">EU</span>
             <span className="brand__text">
               <strong>EU KASKO</strong>
               <small>• EU авто 2016–2025</small>
             </span>
           </Link>
+
+          <nav className="nav" aria-label="Основная навигация">
+            <button
+              className="nav__burger"
+              type="button"
+              aria-label="Открыть меню"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+            <ul className="nav__list">
+              <li><Link className="nav__link" href="/">Главная</Link></li>
+              <li><Link className="nav__link" href="/quote">Рассчитать</Link></li>
+              <li><Link className="nav__link" href="/plans">Планы</Link></li>
+              <li><Link className="nav__link" href="/about">Покрытие</Link></li>
+              <li><Link className="nav__link" href="/guides">Полезное</Link></li>
+              <li><Link className="nav__link" href="/faq">FAQ</Link></li>
+              <li><Link className="nav__link" href="/contact">Контакты</Link></li>
+              <li><Link className="nav__link" href="/legal">Документы</Link></li>
+            </ul>
+          </nav>
+
           <div className="header__actions">
+            <Link className="btn btn--ghost" href="/lk">Войти</Link>
+            <button className="btn btn--ghost" data-theme-toggle type="button">
+              <span className="icon">◐</span><span className="hide-sm">Тема</span>
+            </button>
             <Link className="btn btn--primary" href="/quote">Рассчитать</Link>
           </div>
         </div>
@@ -197,6 +225,35 @@ export default function QuotePage() {
           </div>
         </section>
       </main>
+
+      <footer className="footer">
+        <div className="container footer__grid">
+          <div>
+            <div className="brand brand--footer">
+              <span className="brand__logo">EU</span>
+              <span className="brand__text">
+                <strong>EU KASKO</strong>
+                <small>Страховка для европейских авто (2016–2025)</small>
+              </span>
+            </div>
+            <p className="muted">
+              Оформление и поддержка онлайн. Все документы доступны в личном
+              кабинете.
+            </p>
+          </div>
+          <div className="footer__links">
+            <Link href="/quote">Калькулятор</Link>
+            <Link href="/plans">Планы</Link>
+            <Link href="/about">Покрытие</Link>
+            <Link href="/guides">Полезное</Link>
+            <Link href="/contact">Контакты</Link>
+            <Link href="/lk">Личный кабинет</Link>
+          </div>
+          <div className="footer__meta">
+            <span className="muted">© {new Date().getFullYear()} EU KASKO</span>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }

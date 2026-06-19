@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export const metadata = {
   title: 'Планы страховки - EU KASKO',
@@ -7,17 +9,7 @@ export const metadata = {
 export default function PlansPage() {
   return (
     <>
-      <header className="header">
-        <div className="container header__inner">
-          <Link href="/" className="brand">
-            <span className="brand__logo">EU</span>
-            <span className="brand__text"><strong>EU KASKO</strong></span>
-          </Link>
-          <div className="header__actions">
-            <Link className="btn btn--primary" href="/quote">Рассчитать</Link>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <main id="content">
         <section className="section">
@@ -67,6 +59,8 @@ export default function PlansPage() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }
