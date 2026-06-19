@@ -1,0 +1,139 @@
+
+.auth-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.lk-shell {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+@media (max-width: 920px) {
+  .lk-shell {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lk-side {
+  position: sticky;
+  top: 76px;
+  border-radius: var(--radius2);
+  border: 1px solid var(--border);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+@media (max-width: 920px) {
+  .lk-side {
+    position: static;
+  }
+}
+
+.lk-nav {
+  display: grid;
+  gap: 8px;
+}
+.lk-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card2), transparent 10%);
+  color: var(--text);
+}
+.lk-nav a:hover {
+  background: var(--card2);
+}
+.lk-nav a.is-active {
+  border-color: color-mix(in oklab, var(--primary2), var(--border) 40%);
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--primary2), transparent 84%);
+}
+
+.lk-topline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 10px 0 12px;
+}
+
+.kpi {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--card2);
+}
+.kpi b {
+  font-size: 26px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card2);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+.table th {
+  text-align: left;
+  font-size: 13px;
+  color: var(--muted);
+  padding: 0 12px 8px;
+}
+.table td {
+  padding: 12px 10px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in oklab, var(--card2), transparent 12%);
+}
+.table tr td:first-child {
+  border-left: 1px solid var(--border);
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+.table tr td:last-child {
+  border-right: 1px solid var(--border);
+  border-top-right-radius: 14px;
+  border-bottom-right-radius: 14px;
+}
+.table small {
+  color: var(--muted);
+}
+
+.mini-help {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+
+.lk-gate {
+  max-width: 920px;
+  margin: 0 auto;
+}
+.lk-gate .card {
+  padding: 34px;
+}
+.lk-gate__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
